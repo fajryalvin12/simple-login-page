@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="styles/style.css">
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+</head>
+<body>
+    <!-- Core Container -->
+    <div id="master">
+        <!-- Icon -->
+        <div id="logo">
+            <span class="material-symbols-outlined">
+            travel
+            </span>
+        </div>
+
+        <!-- Header -->
+        <div id="header">
+            <div id="h1">Welcome back!</div>
+            <div class="details">Please enter your details.</div>
+        </div>
+
+        <!-- Input Form -->
+        <div>
+            <form id="login-form">
+                <div class="input-form">
+                    <label class="details" for="email">Email</label>
+                    <div class="input-form-box">
+                        <span class="material-symbols-outlined">
+                            mail
+                        </span>
+                        <input type="text" id="email">
+                    </div>
+                </div>
+                <div class="input-form">
+                    <label class="details" for="password">Password</label>
+                    <div class="input-form-box">
+                        <span class="material-symbols-outlined">
+                            password
+                        </span>
+                        <input type="text" id="password">
+                    </div>
+                </div>
+
+
+                <!-- ToS and Call of Action -->
+                <div id="terms">
+                    <button type="submit">Log in</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Login Button -->
+        <div id="cta">
+            <span class="details">Didn't have an account?</span>
+            <a id="register-form" href="index.html">Sign up</a>    
+        </div>
+        
+    </div>
+</body>
+<script src="script.js"></script>
+</html>

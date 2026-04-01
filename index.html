@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="styles/style.css">
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+</head>
+<body>
+    <!-- Core Container -->
+    <div id="master">
+        <!-- Icon -->
+        <div id="logo">
+            <span class="material-symbols-outlined">
+            travel
+            </span>
+        </div>
+
+        <!-- Header -->
+        <div id="header">
+            <div id="h1">Create an account</div>
+            <div class="details">Let's start your journey with us today</div>
+        </div>
+
+        <!-- Input Form -->
+        <div>
+            <form id="register-form">
+                <div class="input-form">
+                    <label class="details" for="username">Username</label>
+                    <div class="input-form-box">
+                        <span class="material-symbols-outlined">
+                            person
+                        </span>
+                        <input type="text" id="username">
+                    </div>
+                </div>
+                <div class="input-form">
+                    <label class="details" for="email">Email</label>
+                    <div class="input-form-box">
+                        <span class="material-symbols-outlined">
+                            mail
+                        </span>
+                        <input type="text" id="email">
+                    </div>
+                </div>
+                <div class="input-form">
+                    <label class="details" for="password">Password</label>
+                    <div class="input-form-box">
+                        <span class="material-symbols-outlined">
+                            password
+                        </span>
+                        <input type="text" id="password">
+                    </div>
+                </div>
+
+                <!-- ToS and Call of Action -->
+                <div id="terms">
+                    <div class="terms-detail">By creating an account, you agree with our terms and service</div>
+                    <button type="submit">Sign Up</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Login Button -->
+        <div id="cta">
+            <span class="details">Already have an account?</span>
+            <a id="login-form" href="login.html">Log in</a>
+        </div>
+        
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
