@@ -16,4 +16,4 @@ This project is for learning purposes.
 Authentication is handled on the client side using localStorage.
 
 ## Demo
-(link kalau pakai github pages)
+https://simple-login-page-pi-one.vercel.app/
