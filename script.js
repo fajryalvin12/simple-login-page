@@ -18,13 +18,7 @@ const validateInput = (username, email, password) => {
 
 const validateEmail = (email) => {
     let isValidEmail = true
-    const symEmail = "@"
-
-    const validDomain = ["mail.com", "gmail.com"]
-    const inputDomainEmail = email.split("@")[1]
-    const checkDomain = validDomain.includes(inputDomainEmail)
-    isValidEmail = email.includes(symEmail) && checkDomain ? true : false
-
+    isValidEmail = email.includes("@") ? true : false
     return isValidEmail
 }
 
@@ -98,26 +92,27 @@ registerForm.addEventListener("submit", async function(event) {
 loginForm.addEventListener("submit", async function(event) {
     event.preventDefault()
     const email = document.getElementById("email").value
+    const cleanEmail = email.toLowerCase().trim()
     const plainPassword = document.getElementById("password").value
 
     const userData = JSON.parse(localStorage.getItem('user')) || []
 
     // 1. Check input email 
-    const verifyEmail = userData.some(user => user.email === email)
-    if (!verifyEmail) {
-        alert("User didn't found!")
+    const user = userData.find(user => user.email === cleanEmail)
+    if (!user) {
+        document.getElementById("notification").textContent = "User not found!"
         return
     }
 
-    // 2. Check password with hashed pass, storing at db 
-    const selectedUser = userData.filter(user => user.email === email)
-    const hashedPassFromDb = selectedUser[0].password
+    // 2. Check password with hashed pass, storing at db + send inline notif 
+    const hashedPassFromDb = user.password
     const hashedInputPass = await hashPassword(plainPassword)
 
     if (hashedPassFromDb !== hashedInputPass) {
-        alert("Wrong Password!")
-    } else {
-        alert("Login Success!")
-    }
+        document.getElementById("notification").textContent = "Wrong Password!"
+        return
+    } 
+
+    document.getElementById("notification").textContent = "Login Success!"
 
 })
